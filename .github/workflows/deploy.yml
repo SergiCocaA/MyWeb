@@ -31,6 +31,11 @@ jobs:
         run: /usr/local/bin/ngrok config add-authtoken ${{ secrets.NGROK_AUTHTOKEN }}
 
       # 5️⃣ Llançar el túnel ngrok i capturar la URL pública
+      # Nou pas: Mata qualsevol túnel Ngrok existent per evitar conflictes
+      - name: Kill existing ngrok tunnels
+        run: |
+          pkill ngrok || true  # Mata processos Ngrok (ignora si no n'hi ha)
+          sleep 2  # Petit delay per neteja
       - name: Start Ngrok tunnel
         id: ngrok
         run: |
