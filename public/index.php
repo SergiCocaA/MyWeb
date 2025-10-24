@@ -9,11 +9,11 @@
     <p>Web desplegada amb Docker i GitHub Actions.</p>
 
     <?php
-    // Test connexió BD (credencials del docker-compose.yml)
-    $host = "db";       // Host intern de Docker
-    $username = "user"; // Usuari
-    $password = "password"; // Contrasenya
-    $dbname = "demo";   // Nom BD
+    
+    $host = "db";      
+    $username = "user"; 
+    $password = "password"; 
+    $dbname = "demo"; 
 
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
