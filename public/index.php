@@ -18,9 +18,9 @@
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "<p style='color: green; font-weight: bold;'>✅ Connexió a BD 'demo' OK! 😊</p>";
+        echo "<p style='color: green; font-weight: bold;'>onnexió a BD</p>";
     } catch (PDOException $e) {
-        echo "<p style='color: red; font-weight: bold;'>❌ Error connexió BD: " . $e->getMessage() . "</p>";
+        echo "<p style='color: red; font-weight: bold;'>Error BD: " . $e->getMessage() . "</p>";
     }
     ?>
 </body>
